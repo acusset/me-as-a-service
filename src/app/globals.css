@@ -2,20 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --eerie: 20 6% 9%;
+    --xanthous: 42 79% 54%;
+    --alabaster: 77 11% 87%;
+    --tekhelet: 246 46% 37%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --eerie: 20 6% 9%;
+    --xanthous: 42 79% 54%;
+    --alabaster: 77 11% 87%;
+    --tekhelet: 246 46% 37%;
+  }
 }
