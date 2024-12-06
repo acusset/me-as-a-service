@@ -10,7 +10,7 @@ export default function Hero() {
           Empower your teams to deliver <span className="block text-xanthous">high-quality results.</span>
         </h1>
         <p className="text-alabaster text-xl">
-          Empowering teams to deliver excellence, Antoine combines technical expertise, mentorship, and strategic vision to build scalable systems and drive innovation, aligning technology with business success.
+          Empowering teams to deliver excellence, <span className="text-xanthous">Antoine</span> combines technical expertise, mentorship, and strategic vision to build scalable systems and drive innovation, aligning technology with business success.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row gap-8">
           <Button asChild size="xl" variant="default">
@@ -20,7 +20,7 @@ export default function Hero() {
           </Button>
           <Button asChild size="xl" variant="secondary">
             <Link href="#contact">
-              Contact <Mail className="ml-2"/>
+              Book a demo <Presentation className="ml-2"/>
             </Link>
           </Button>
         </div>
