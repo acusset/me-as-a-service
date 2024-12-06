@@ -20,7 +20,7 @@ export default function Hero() {
           </Button>
           <Button asChild size="xl" variant="secondary">
             <Link href="#contact">
-              Contact Us <Mail className="ml-2"/>
+              Contact <Mail className="ml-2"/>
             </Link>
           </Button>
         </div>

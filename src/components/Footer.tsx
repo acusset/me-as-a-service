@@ -21,7 +21,7 @@ export default function Footer() {
       </Link>
       <Link
         className="flex text-alabaster items-center gap-2 hover:underline hover:underline-offset-4"
-        href="#"
+        href="#contact"
         target="_blank"
         rel="noopener noreferrer"
       >

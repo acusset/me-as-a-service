@@ -9,7 +9,7 @@ interface FeatureCardProps {
 
 export function FeatureCard({ name, description, Icon }: FeatureCardProps) {
   return (
-    <Card className="border-alabaster bg-transparent transition-all duration-300 hover:shadow-lg hover:shadow-tekhelet/20 hover:-translate-y-1">
+    <Card className="bg-eerie border-xanthous hover:bg-eerie/80 transition-all duration-300 hover:shadow-lg hover:shadow-tekhelet/20 hover:-translate-y-1">
       <CardHeader>
         <div className="flex h-20 w-20 items-center justify-center rounded-full bg-tekhelet mx-auto mb-4">
           <Icon className="h-10 w-10 text-alabaster" aria-hidden="true" />

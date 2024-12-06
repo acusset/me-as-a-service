@@ -1,5 +1,5 @@
 import { FeatureCard } from './FeatureCard'
-import { Code, Cpu, Globe, Layers } from 'lucide-react'
+import { Code, Cpu, Layers, PersonStanding } from 'lucide-react'
 
 const features = [
   {
@@ -8,13 +8,13 @@ const features = [
     icon: Layers,
   },
   {
-    name: 'Cloud & DevOps Mastery',
-    description: 'Experienced with Docker, Kubernetes, and major cloud platforms for robust, scalable deployments.',
-    icon: Globe,
+    name: 'Though Leadership',
+    description: 'Empower your team to grow and succeed by guiding, supporting, and inspiring them rather than controlling every move.',
+    icon: PersonStanding,
   },
   {
-    name: 'Advanced Architecture Design',
-    description: 'Skilled in microservices, event-driven architecture, and domain-driven design for complex systems.',
+    name: 'Advanced Architecture',
+    description: 'Skilled in Microservices, Event-driven architecture, and Domain-Driven Design for complex systems.',
     icon: Cpu,
   },
   {
@@ -25,6 +25,15 @@ const features = [
 ]
 
 export default function Features() {
+  const cards = features.map((feature) => (
+    <FeatureCard
+      key={feature.name}
+      name={feature.name}
+      description={feature.description}
+      Icon={feature.icon}
+    />
+  ));
+
   return (
     <div id="features" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -38,14 +47,7 @@ export default function Features() {
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
-            {features.map((feature) => (
-              <FeatureCard
-                key={feature.name}
-                name={feature.name}
-                description={feature.description}
-                Icon={feature.icon}
-              />
-            ))}
+            {cards}
           </div>
         </div>
       </div>
