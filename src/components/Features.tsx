@@ -8,7 +8,7 @@ const features = [
     icon: Layers,
   },
   {
-    name: 'Though Leadership',
+    name: 'Servant Leadership',
     description: 'Empower your team to grow and succeed by guiding, supporting, and inspiring them rather than controlling every move.',
     icon: PersonStanding,
   },
@@ -42,7 +42,7 @@ export default function Features() {
             Everything you need <span className="block text-xanthous">in one place.</span>
           </h2>
           <p className="mt-6 text-lg leading-8 text-alabaster/80">
-            With over 8 years of experience, Antoine comes with comprehensive features to tackle your most challenging projects.
+            With over 8 years of experience, <span className="text-xanthous">Antoine</span> comes with comprehensive features to tackle your most challenging projects.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
