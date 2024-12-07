@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-eerie">
+      <body className="bg-eerie min-h-screen">
         {/* Background layer */}
         <div className="fixed inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-eerie via-eerie to-tekhelet/20" />
@@ -37,7 +37,7 @@ export default function RootLayout({
         {/* Content layer */}
         <div className="relative z-10">
           <NavHeader />
-          <main className="pt-16">
+          <main className="py-16">
             {children}
           </main>
           <Footer/>

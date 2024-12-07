@@ -22,7 +22,7 @@ export default function NavHeader() {
             </Button>
             <Button size="lg" variant="ghost">Case Studies</Button>
             <Button size="lg" variant="ghost">
-              <Link href="documentation">
+              <Link href="/documentation">
                 Documentation
               </Link>
             </Button>
@@ -31,7 +31,7 @@ export default function NavHeader() {
           <div className="flex-1 flex items-center justify-evenly">
             <Button size="lg" variant="ghost">Pricing</Button>
             <Button size="lg" variant="ghost" asChild>
-              <Link href="#contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </Button>
           </div>
         </div>

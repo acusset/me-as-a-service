@@ -4,17 +4,20 @@ import { createNotionPage } from "./actions";
 
 export default function ContactForm() {
   return (
-    <div id="contact" className="py-16 sm:py-20">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
+    <div id="contact">
+      <div className="mx-auto max-w-[90rem] px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl lg:text-center">
           <h2 className="text-2xl font-bold tracking-tight text-alabaster sm:text-3xl">
             Get in Touch <span className="block text-xanthous">Let&apos;s create something amazing.</span>
           </h2>
         </div>
-        <div className="mx-auto mt-8 max-w-2xl sm:mt-12">
-          <div className="bg-eerie border-xanthous rounded-2xl border-2 p-6 md:p-8
-            hover:bg-eerie/80 transition-all duration-300 
-            hover:shadow-lg hover:shadow-tekhelet/20">
+        <div className="mx-auto mt-8 max-w-3xl sm:mt-12">
+          <div className={`
+            bg-eerie border-xanthous rounded-2xl border-2
+            p-6 md:p-8
+            transition-all duration-300
+            hover:bg-eerie/80 hover:shadow-lg hover:shadow-tekhelet/20
+          `}>
             <ContactFormContent />
           </div>
         </div>
