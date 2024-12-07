@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Rocket, Menu, X } from 'lucide-react'
+import { Rocket, Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 export default function NavHeader() {
