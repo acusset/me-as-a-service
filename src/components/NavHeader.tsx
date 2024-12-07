@@ -15,12 +15,12 @@ export default function NavHeader() {
           </div>
           <div className="flex-1"></div>
           <div className="flex-1 flex items-center justify-evenly">
-            <Button size="lg" asChild variant="ghost">
-              <Link href="#features">
-                Services
-              </Link>
+            <Button size="lg" variant="ghost" disabled className="opacity-50 cursor-not-allowed">
+              Services
             </Button>
-            <Button size="lg" variant="ghost">Case Studies</Button>
+            <Button size="lg" variant="ghost" disabled className="opacity-50 cursor-not-allowed">
+              Case Studies
+            </Button>
             <Button size="lg" variant="ghost">
               <Link href="/documentation">
                 Documentation
