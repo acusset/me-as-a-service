@@ -5,30 +5,11 @@ import Pricing from "@/components/Pricing";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden">
-      {/* Global background effects */}
-      <div className="fixed inset-0 bg-gradient-to-br from-eerie via-eerie to-tekhelet/20" />
-      
-      <div 
-        className="fixed top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-tekhelet/10 rounded-full blur-3xl
-          animate-shape-1 transform-gpu will-change-transform origin-center"
-      />
-      <div 
-        className="fixed top-1/4 right-1/4 w-[600px] h-[600px] bg-xanthous/10 rounded-full blur-3xl
-          animate-shape-2 transform-gpu will-change-transform origin-center"
-      />
-      <div 
-        className="fixed bottom-0 left-0 w-[400px] h-[400px] bg-tekhelet/20 rounded-full blur-2xl
-          animate-shape-3 transform-gpu will-change-transform origin-center"
-      />
-      
-      {/* Content */}
-      <div className="relative">
-        <Hero />
-        <Features />
-        <Pricing />
-        <ContactForm />
-      </div>
+    <main className="relative min-h-screen">
+      <Hero />
+      <Features />
+      <Pricing />
+      <ContactForm />
     </main>
   );
 }
