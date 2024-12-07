@@ -48,7 +48,7 @@ export default function Pricing() {
             Choose the perfect plan for your project needs
           </p>
         </div>
-        <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-3 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0">
+        <div className="mt-12 space-y-4 lg:mt-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0">
           {tiers.map((tier) => (
             <Card key={tier.name} className="bg-eerie border-xanthous transform transition-all duration-300 
               hover:scale-105 hover:bg-eerie/80 hover:border-tekhelet hover:shadow-xl hover:shadow-tekhelet/20 
