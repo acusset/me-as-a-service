@@ -40,7 +40,7 @@ export default function Pricing() {
   return (
     <div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <div className="text-left sm:text-center">
           <h2 className="text-3xl font-extrabold text-xanthous sm:text-4xl">
             Pricing Plans
           </h2>

@@ -7,7 +7,7 @@ export default function ContactForm() {
     <div id="contact">
       <div className="mx-auto max-w-[90rem] px-6 lg:px-8">
         <div className="mx-auto max-w-3xl lg:text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-alabaster sm:text-3xl">
+          <h2 className="text-3xl font-bold tracking-tight text-alabaster sm:text-4xl">
             Get in Touch <span className="block text-xanthous">Let&apos;s create something amazing.</span>
           </h2>
         </div>
