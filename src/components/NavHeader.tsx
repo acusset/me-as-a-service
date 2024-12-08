@@ -6,11 +6,11 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 export default function NavHeader() {
 
   const menuItems = [
-    { label: "Services", href: "#", disabled: true },
-    { label: "Case Studies", href: "#", disabled: true },
-    { label: "Documentation", href: "/documentation", disabled: false },
-    { label: "Pricing", href: "#", disabled: false },
-    { label: "Contact", href: "/contact", disabled: false },
+    { label: "Features", href: "features", disabled: false },
+    { label: "Case Studies", href: "case-studies", disabled: true },
+    { label: "Documentation", href: "documentation", disabled: false },
+    { label: "Pricing", href: "pricing", disabled: true },
+    { label: "Contact", href: "contact", disabled: false },
   ]
 
   return (
