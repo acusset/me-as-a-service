@@ -5,14 +5,7 @@ export default function ArticleCardSkeleton() {
       <div className="space-y-6">
         {/* Title skeleton - matches text-3xl font-semibold */}
         <div className="h-9 bg-alabaster/10 rounded-lg w-3/4" />
-        
-        {/* Preview text skeleton - matches text-lg leading-relaxed */}
-        <div className="space-y-3">
-          <div className="h-7 bg-alabaster/10 rounded-lg" />
-          <div className="h-7 bg-alabaster/10 rounded-lg" />
-          <div className="h-7 bg-alabaster/10 rounded-lg w-2/3" />
-        </div>
-        
+
         {/* Tags skeleton */}
         <div className="flex items-center pt-4">
           <div className="flex flex-wrap gap-2">
@@ -20,6 +13,13 @@ export default function ArticleCardSkeleton() {
             <div className="h-6 w-20 bg-tekhelet/20 rounded-full" />
             <div className="h-6 w-24 bg-tekhelet/20 rounded-full" />
           </div>
+        </div>
+        
+        {/* Preview text skeleton - matches text-lg leading-relaxed */}
+        <div className="space-y-3">
+          <div className="h-7 bg-alabaster/10 rounded-lg" />
+          <div className="h-7 bg-alabaster/10 rounded-lg" />
+          <div className="h-7 bg-alabaster/10 rounded-lg w-2/3" />
         </div>
       </div>
     </article>

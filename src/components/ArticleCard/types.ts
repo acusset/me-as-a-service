@@ -5,6 +5,7 @@ interface Tag {
 
 export interface Article {
   id: string
+  slug: string
   title: string
   preview: string
   tags: Tag[]
