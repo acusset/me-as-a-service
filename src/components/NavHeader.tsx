@@ -7,10 +7,11 @@ export default function NavHeader() {
 
   const menuItems = [
     { label: "Features", href: "features", disabled: false },
-    { label: "Case Studies", href: "case-studies", disabled: true },
-    { label: "Documentation", href: "documentation", disabled: false },
-    { label: "Pricing", href: "pricing", disabled: true },
-    { label: "Contact", href: "contact", disabled: false },
+    { label: "Customer Studies", href: "/customer-studies", disabled: false },
+    { label: "Integrations", href: "/integrations", disabled: false },
+    { label: "Documentation", href: "/documentation", disabled: false },
+    { label: "Roadmap", href: "/roadmap", disabled: false },
+    { label: "Contact", href: "/contact", disabled: false },
   ]
 
   return (
@@ -19,21 +20,21 @@ export default function NavHeader() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo section */}
           <div className="flex items-center space-x-4">
-            <Rocket className="h-6 w-6 text-xanthous border-alabaster"/>
+            <Rocket className="h-8 w-8 text-xanthous border-alabaster"/>
             <Link href="/" className="text-2xl font-bold text-xanthous">
               antoine.dev
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             {menuItems.map((item) => (
               <Button 
                 key={item.label}
                 size="lg" 
                 variant="ghost" 
                 disabled={item.disabled}
-                className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}
+                className={`text-base ${item.disabled ? "opacity-50 cursor-not-allowed" : ""}`}
                 asChild={!item.disabled}
               >
                 {item.disabled ? (
@@ -46,11 +47,11 @@ export default function NavHeader() {
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
+                  <Menu className="h-8 w-8" />
                 </Button>
               </SheetTrigger>
               <SheetContent className="w-[300px] sm:w-[400px] bg-eerie border-l border-alabaster/10">
@@ -64,7 +65,7 @@ export default function NavHeader() {
                       size="lg"
                       variant="ghost"
                       disabled={item.disabled}
-                      className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}
+                      className={`text-lg ${item.disabled ? "opacity-50 cursor-not-allowed" : ""}`}
                       asChild={!item.disabled}
                     >
                       {item.disabled ? (

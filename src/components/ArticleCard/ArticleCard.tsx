@@ -18,7 +18,7 @@ export default function ArticleCard({ article }: { article: Article }) {
           <div className="flex items-center pt-4">
             <div className="flex flex-wrap gap-2">
               {article.tags.map((tag) => (
-                <Badge key={tag.id} variant="secondary" className="bg-tekhelet/20 text-alabaster">
+                <Badge key={tag.id} variant="default" className="bg-tekhelet/20 text-alabaster">
                   {tag.name}
                 </Badge>
               ))}

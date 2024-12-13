@@ -6,25 +6,29 @@ import { articles } from "./articles";
 async function getArticles(): Promise<Article[]> {
   // Simulate network delay
   await new Promise(resolve => setTimeout(resolve, 1000))
-  
-  // In a real application, you would fetch this data from an API
   return articles;
 }
-
 
 export default function Documentation() {
   const articles = use(getArticles())
 
   return (
-    <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <div className="space-y-16">
-          {articles.map((article) => (
-            <ArticleCard key={article.id} article={article} />
-          ))}
+    <main className="min-h-screen bg-midnight pt-24 pb-16">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-alabaster mb-6">Documentation</h1>
+          <p className="text-lg text-alabaster/80 mb-12">
+            Explore our comprehensive guides and technical documentation.
+          </p>
+
+          <div className="space-y-8">
+            {articles.map((article) => (
+              <ArticleCard key={article.id} article={article} />
+            ))}
+          </div>
         </div>
       </div>
-      </div>
+    </main>
   )
 }
 

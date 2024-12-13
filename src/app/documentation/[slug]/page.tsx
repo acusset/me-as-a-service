@@ -3,7 +3,6 @@ import { articles } from "../articles"
 
 export const generateStaticParams = () => articles.map(article => ({ slug: article.slug }));
 
-
 export default async function ArticlePage({ params }: {
   params: Promise<{ slug: string }>
 }) {
