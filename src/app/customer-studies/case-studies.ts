@@ -15,7 +15,6 @@ export const experiences: Experience[] = [
         description: "Core system for managing client portfolios",
         technologies: ["React", "TypeScript", "Node.js"]
       }
-      // ... other projects
     ],
     tags: [
       { id: "1", name: "Frontend" },
@@ -25,5 +24,4 @@ export const experiences: Experience[] = [
     companyTextColor: "text-emerald-500",
     technologies: ["React", "TypeScript", "Node.js"]
   }
-  // ... other experiences
 ] 

@@ -35,9 +35,9 @@ export default function RootLayout({
         </div>
 
         {/* Content layer */}
-        <div className="relative z-10">
+        <div className="relative z-10 flex flex-col min-h-screen">
           <NavHeader />
-          <main className="py-16">
+          <main className="flex-grow pt-16">
             {children}
           </main>
           <Footer/>

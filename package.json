@@ -1,7 +1,9 @@
 {
   "name": "me-as-a-service",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": "Antoine CUSSET",
+  "email": "a.cusset@gmail.com",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -18,23 +20,27 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
-    "next": "15.0.3",
+    "next": "15.1.0",
     "next-themes": "^0.4.3",
-    "react": "19.0.0-rc-66855b96-20241106",
-    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "shadcn-ui": "^0.9.3",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@eslint/js": "^9.17.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "15.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.13.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "typescript-eslint": "^8.18.0"
   }
 }

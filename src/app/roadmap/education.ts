@@ -24,8 +24,6 @@ export const timelineData: TimelineItem[] = [
     description: "Implemented modular monolith B2B2B application with REST API using PHP/Symfony. Automated core API testing using Gherkin and Behat.",
     type: "experience" as const
   },
-  
-  // Certifications & Education
   {
     date: "2024",
     title: "ICT Assessment Certification",
