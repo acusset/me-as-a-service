@@ -17,11 +17,11 @@ const features = [
     description: 'Practiced in Scrum, Kanban, and Extreme Programming for efficient, iterative development.',
     icon: Code,
   },
-  {
-    name: 'Servant Leadership',
-    description: 'Empower your team to grow and succeed by guiding, supporting, and inspiring them rather than controlling every move.',
-    icon: PersonStanding,
-  },
+  // {
+  //   name: 'Servant Leadership',
+  //   description: 'Empower your team to grow and succeed by guiding, supporting, and inspiring them rather than controlling every move.',
+  //   icon: PersonStanding,
+  // },
   {
     name: 'Product Mindset',
     description: 'Focused on the product, ensuring that the solution is tailored to the specific needs of the business.',

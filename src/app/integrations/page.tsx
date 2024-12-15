@@ -49,7 +49,7 @@ export default function IntegrationsPage() {
         <p className="text-xl text-alabaster/60">Coming Soon</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative">
-        <div className="absolute inset-0 backdrop-blur-sm bg-eerie/30 z-10" />
+        <div className="absolute inset-0 backdrop-blur-sm z-10" />
         {integrationsList}
       </div>
     </main>

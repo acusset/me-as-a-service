@@ -8,7 +8,7 @@ export default function NavHeader() {
 
   const menuItems = [
     { label: "Features", href: "features", disabled: false },
-    { label: "Customer Studies", href: "/customer-studies", disabled: false },
+    { label: "Customer Stories", href: "/customer-stories", disabled: false },
     { label: "Integrations", href: "/integrations", disabled: false },
     { label: "Documentation", href: "/documentation", disabled: false },
     { label: "Roadmap", href: "/roadmap", disabled: false },

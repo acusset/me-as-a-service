@@ -1,7 +1,5 @@
 'use client'
 
-import { useEffect } from 'react'
-
 export default function Error({
   error,
   reset,
@@ -9,11 +7,6 @@ export default function Error({
   error: Error & { digest?: string }
   reset: () => void
 }) {
-  useEffect(() => {
-    // Log the error to an error reporting service
-    console.error(error)
-  }, [error])
-
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="text-center space-y-4">
