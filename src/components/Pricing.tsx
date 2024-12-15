@@ -1,38 +1,49 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
+import { PricingCard } from "@/components/PricingCard"
 
 const tiers = [
   {
-    name: 'Basic Tier',
-    description: 'Perfect for small projects',
+    name: 'Developer Tier',
+    description: 'Perfect for smaller projects and maintenance',
     price: '$50/hour',
     features: [
-      'Code review',
-      'Bug fixing',
-      'Basic feature implementation'
-    ]
+      'Basic code implementation',
+      'Follows existing patterns',
+      'Works on JIRA only',
+      'Either backend or frontend',
+      '9 to 5 hours',
+      'Remote work only',
+    ],
+    cta: 'Start Project',
+    recommended: false
   },
   {
-    name: 'Premium Tier',
-    description: 'Ideal for medium to large projects',
+    name: 'Senior Developer Tier',
+    description: 'Ideal for complex technical challenges',
     price: '$100/hour',
     features: [
-      'Everything in Basic',
-      'Architecture design',
-      'Performance optimization',
-      'Team collaboration'
-    ]
+      'Full stack development',
+      'System design',
+      'Code review',
+      'Up to 2 days per week on-site',
+      'Weekday overtime'
+    ],
+    cta: 'Get Started',
+    recommended: false
   },
   {
-    name: 'Custom Tier',
-    description: 'Tailored for your specific needs',
-    price: 'Contact for pricing',
+    name: 'Technical Lead Tier',
+    description: 'Complete project leadership and execution',
+    price: 'Contact Us',
     features: [
-      'Everything in Premium',
-      'On-site consultation',
-      'Long-term project planning',
-      'Dedicated support'
-    ]
+      'Everything in Senior Developer',
+      'Solution Architecture',
+      'End to end Project Delivery',
+      'Technical mentorship',
+      '5 days per week on-site',
+      'Unlimited overtime'
+    ],
+    cta: 'Get in touch',
+    recommended: true
   }
 ]
 
@@ -50,32 +61,7 @@ export default function Pricing() {
         </div>
         <div className="mt-12 space-y-4 lg:mt-16 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0">
           {tiers.map((tier) => (
-            <Card key={tier.name} className="bg-eerie border-xanthous transform transition-all duration-300 
-              hover:scale-105 hover:bg-eerie/80 hover:border-tekhelet hover:shadow-xl hover:shadow-tekhelet/20 
-              hover:z-10">
-              <CardHeader>
-                <CardTitle className="text-2xl font-semibold text-xanthous">{tier.name}</CardTitle>
-                <CardDescription className="mt-4 text-alabaster">{tier.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <span className="text-4xl font-extrabold text-alabaster">{tier.price}</span>
-                <ul className="mt-6 space-y-4">
-                  {tier.features.map((feature) => (
-                    <li key={feature} className="flex space-x-3 text-alabaster">
-                      <svg className="flex-shrink-0 h-5 w-5 text-tekhelet" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                      </svg>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full bg-tekhelet hover:bg-tekhelet/90 text-alabaster">
-                  Get started
-                </Button>
-              </CardFooter>
-            </Card>
+            <PricingCard key={tier.name} tier={tier} />
           ))}
         </div>
       </div>

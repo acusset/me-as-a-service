@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Rocket, Menu } from 'lucide-react'
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetHeader, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
 
 export default function NavHeader() {
 
@@ -55,6 +56,10 @@ export default function NavHeader() {
                 </Button>
               </SheetTrigger>
               <SheetContent className="w-[300px] sm:w-[400px] bg-eerie border-l border-alabaster/10">
+                <SheetHeader>
+                  <SheetTitle>                  <VisuallyHidden.Root>Menu</VisuallyHidden.Root>
+</SheetTitle>
+                </SheetHeader>
                 <div className="flex justify-end mb-2">
                   <SheetTrigger />
                 </div>

@@ -1,5 +1,5 @@
 import { FeatureCard } from './FeatureCard'
-import { Code, Cpu, Layers, PersonStanding } from 'lucide-react'
+import { BriefcaseBusiness, Code, Cpu, Layers, PersonStanding } from 'lucide-react'
 
 const features = [
   {
@@ -8,19 +8,24 @@ const features = [
     icon: Layers,
   },
   {
-    name: 'Servant Leadership',
-    description: 'Empower your team to grow and succeed by guiding, supporting, and inspiring them rather than controlling every move.',
-    icon: PersonStanding,
-  },
-  {
     name: 'Advanced Architecture',
-    description: 'Skilled in Microservices, Event-driven architecture, and Domain-Driven Design for complex systems.',
+    description: 'Designs scalable system architectures that empower teams to build maintainable, future-proof solutions.',
     icon: Cpu,
   },
   {
     name: 'Agile Methodologies',
     description: 'Practiced in Scrum, Kanban, and Extreme Programming for efficient, iterative development.',
     icon: Code,
+  },
+  {
+    name: 'Servant Leadership',
+    description: 'Empower your team to grow and succeed by guiding, supporting, and inspiring them rather than controlling every move.',
+    icon: PersonStanding,
+  },
+  {
+    name: 'Product Mindset',
+    description: 'Focused on the product, ensuring that the solution is tailored to the specific needs of the business.',
+    icon: BriefcaseBusiness,
   },
 ]
 
@@ -35,7 +40,7 @@ export default function Features() {
   ));
 
   return (
-    <div id="features">
+    <section id="features">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-3xl font-bold tracking-tight text-alabaster sm:text-4xl">
@@ -51,7 +56,7 @@ export default function Features() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
