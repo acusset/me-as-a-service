@@ -32,12 +32,12 @@ export const experiences: Experience[] = [
   },
   {
     id: "2",
-    title: "StorHub Website Builder",
-    slug: "storhub-website-builder",
+    title: "Storage Company Website Builder",
+    slug: "storage-company-website-builder",
     description: "End-to-end development of a website builder system with reusable components and content management capabilities.",
     period: "2022",
     company: "Palo IT",
-    role: "Senior Software Engineer",
+    role: "Tech Lead",
     location: "Singapore",
     projects: [
       {

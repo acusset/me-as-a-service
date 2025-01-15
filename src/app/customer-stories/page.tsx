@@ -7,12 +7,12 @@ export default function CustomerStories() {
   const experiences = shortExperiences.map((experience) => (
     <Link 
         key={experience.title} 
-                href={`/customer-stories/${experience.slug}`}
-                className="block hover:no-underline group transition-transform duration-300 hover:scale-[1.02]"
-              >
-                <ExperienceCard experience={experience} />
-              </Link>
-            ))
+        href={`/customer-stories/${experience.slug}`}
+        className="block hover:no-underline group transition-transform duration-300 hover:scale-[1.02]"
+    >
+      <ExperienceCard experience={experience} />
+    </Link>
+    ))
 
   return (
     <main className="min-h-screen bg-midnight pt-24 pb-16">
