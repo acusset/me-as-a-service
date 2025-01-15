@@ -27,7 +27,16 @@ export default async function ArticlePage({ params }: {
           </span>
         ))}
       </div>
-      <p className="text-alabaster text-lg">{article.preview}</p>
+      <div className="relative">
+        <p className="text-alabaster text-lg mb-8">{article.preview}</p>
+        <div className="mt-12 text-center">
+          <p className="text-xl text-alabaster/60">Full Article Coming Soon</p>
+        </div>
+        <div className="mt-8 p-6 rounded-lg bg-eerie/40 border border-alabaster/10 relative">
+          <div className="absolute inset-0 backdrop-blur-sm z-10" />
+          <div className="h-64 bg-gradient-to-b from-alabaster/5 to-transparent" />
+        </div>
+      </div>
     </article>
   )
 }

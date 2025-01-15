@@ -9,6 +9,8 @@ async function getArticles(): Promise<Article[]> {
   return articles;
 }
 
+const sortArticles = ((a: Article, b: Article) => a.order - b.order)
+
 export default function Documentation() {
   const articles = use(getArticles())
 
@@ -22,7 +24,7 @@ export default function Documentation() {
           </p>
 
           <div className="space-y-8">
-            {articles.map((article) => (
+            {articles.sort(sortArticles).map((article) => (
               <ArticleCard key={article.id} article={article} />
             ))}
           </div>
