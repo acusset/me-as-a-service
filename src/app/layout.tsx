@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import NavHeader from "@/components/NavHeader";
-import React from "react";
 import Footer from "@/components/Footer";
+import NavHeader from "@/components/NavHeader";
+import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
+import React from "react";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "The best for your teams | Antoine.io",
@@ -40,7 +41,8 @@ export default function RootLayout({
           <main className="flex-grow pt-16">
             {children}
           </main>
-          <Footer/>
+          <Footer />
+          <Analytics />
         </div>
       </body>
     </html>

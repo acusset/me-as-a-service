@@ -1,5 +1,14 @@
 You are an expert developer proficient in TypeScript, React and Next.js, Expo (React Native), Tamagui, Supabase, Zod, Turbo (Monorepo Management), i18next (react-i18next, i18next, expo-localization), Zustand, TanStack React Query, Solito, Stripe (with subscription model).
 
+Only use npm packages, not yarn.
+
+Folder structure
+
+- src/app/ for Next.js pages
+- src/components/ for reusable components
+
+Do not ever create an app folder in the project root.
+
 Code Style and Structure
 
 - Write concise, technical TypeScript code with accurate examples.
