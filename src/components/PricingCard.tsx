@@ -8,6 +8,7 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface PricingTier {
   name: string;
@@ -72,16 +73,18 @@ export function PricingCard({ tier }: PricingCardProps) {
         </ul>
       </CardContent>
       <CardFooter>
-        <Button
-          className={cn(
-            "w-full text-alabaster",
-            tier.recommended
-              ? "bg-tekhelet hover:bg-tekhelet/90"
-              : "bg-tekhelet/80 hover:bg-tekhelet"
-          )}
-        >
-          {tier.cta}
-        </Button>
+        <Link href="/contact" className="w-full">
+          <Button
+            className={cn(
+              "w-full text-alabaster",
+              tier.recommended
+                ? "bg-tekhelet/80 hover:bg-tekhelet"
+                : "bg-tekhelet hover:bg-tekhelet/90"
+            )}
+          >
+            {tier.cta}
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
