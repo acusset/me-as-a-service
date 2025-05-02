@@ -9,7 +9,7 @@ export interface Skill {
 
 export const skills = [
   { name: "React", category: "Frameworks", description: "Building dynamic user interfaces", icon: "⚛️", projects: ["StorHub Website", "Climate Impact X"] },
-  { name: "Next.js", category: "Frameworks", description: "Server-side rendering and static generation", icon: "▲", projects: ["antoine.dev", "StorHub Website"] },
+  { name: "Next.js", category: "Frameworks", description: "Server-side rendering and static generation", icon: "▲", projects: ["acusset.dev", "StorHub Website"] },
   { name: "TypeScript", category: "Languages", description: "Typed superset of JavaScript", icon: "TS", projects: ["Climate Impact X", "StorHub Website"] },
   { name: "Python", category: "Languages", description: "Versatile language for various applications", icon: "🐍", projects: ["Data Analysis Tool", "Automation Scripts"] },
   { name: "Docker", category: "Technologies", description: "Containerization for seamless deployment", icon: "🐳", projects: ["Microservices Architecture", "CI/CD Pipeline"] },

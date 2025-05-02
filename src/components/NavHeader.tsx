@@ -1,11 +1,16 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Rocket, Menu } from 'lucide-react'
-import { Sheet, SheetContent, SheetHeader, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
-import * as VisuallyHidden from '@radix-ui/react-visually-hidden'
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Rocket, Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+  SheetTitle,
+} from "@/components/ui/sheet";
+import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
 
 export default function NavHeader() {
-
   const menuItems = [
     { label: "Features", href: "features", disabled: false },
     { label: "Customer Stories", href: "/customer-stories", disabled: false },
@@ -13,7 +18,7 @@ export default function NavHeader() {
     { label: "Documentation", href: "/documentation", disabled: false },
     { label: "Roadmap", href: "/roadmap", disabled: false },
     { label: "Contact", href: "/contact", disabled: false },
-  ]
+  ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-eerie/80 border-b border-alabaster/10">
@@ -21,21 +26,23 @@ export default function NavHeader() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo section */}
           <div className="flex items-center space-x-4">
-            <Rocket className="h-8 w-8 text-xanthous border-alabaster"/>
+            <Rocket className="h-8 w-8 text-xanthous border-alabaster" />
             <Link href="/" className="text-2xl font-bold text-xanthous">
-              antoine.dev
+              acusset.dev
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-3">
             {menuItems.map((item) => (
-              <Button 
+              <Button
                 key={item.label}
-                size="lg" 
-                variant="ghost" 
+                size="lg"
+                variant="ghost"
                 disabled={item.disabled}
-                className={`text-base ${item.disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+                className={`text-base ${
+                  item.disabled ? "opacity-50 cursor-not-allowed" : ""
+                }`}
                 asChild={!item.disabled}
               >
                 {item.disabled ? (
@@ -57,8 +64,10 @@ export default function NavHeader() {
               </SheetTrigger>
               <SheetContent className="w-[300px] sm:w-[400px] bg-eerie border-l border-alabaster/10">
                 <SheetHeader>
-                  <SheetTitle>                  <VisuallyHidden.Root>Menu</VisuallyHidden.Root>
-</SheetTitle>
+                  <SheetTitle>
+                    {" "}
+                    <VisuallyHidden.Root>Menu</VisuallyHidden.Root>
+                  </SheetTitle>
                 </SheetHeader>
                 <div className="flex justify-end mb-2">
                   <SheetTrigger />
@@ -70,7 +79,9 @@ export default function NavHeader() {
                       size="lg"
                       variant="ghost"
                       disabled={item.disabled}
-                      className={`text-lg ${item.disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+                      className={`text-lg ${
+                        item.disabled ? "opacity-50 cursor-not-allowed" : ""
+                      }`}
                       asChild={!item.disabled}
                     >
                       {item.disabled ? (
@@ -87,6 +98,5 @@ export default function NavHeader() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
-
