@@ -2,14 +2,25 @@
 
 import { Client } from "@notionhq/client";
 
-export async function createNotionPage(formData: FormData) {
+let client: Client | null = null;
+
+function getNotionClient(): Client {
+  if (!client) {
+    client = new Client({ auth: process.env.NOTION_API_KEY });
+  }
+
+  return client;
+}
+
+export async function addContactEntryToNotion(formData: FormData) {
   try {
-    // Create a notion page in my database
-    const notion = new Client({ auth: process.env.NOTION_API_KEY })
-    const databaseId = process.env.NOTION_DATABASE_ID
+    const notion = getNotionClient();
+    const databaseId = process.env.NOTION_DATABASE_ID;
+
     if (!databaseId) {
-      throw new Error("NOTION_DATABASE_ID is not set")
+      throw new Error("Leads database is not set.");
     }
+
     await notion.pages.create({
       parent: { database_id: databaseId },
       properties: {
@@ -18,9 +29,36 @@ export async function createNotionPage(formData: FormData) {
         Company: { rich_text: [{ text: { content: formData.get("company") as string } }] },
         Message: { rich_text: [{ text: { content: formData.get("message") as string } }] }
       },
-    })
+    });
+
   } catch (error) {
-    console.error('Failed to create Notion page:', error);
-    throw new Error('Failed to submit contact form. Please try again later.');
+    throw new Error('Failed to submit contact form. Please try again later.', { cause: error });
   }
-} 
+}
+
+type TrackingInfo = {
+  slug: string;
+  path: string;
+};
+
+export async function addTrackingInformationToNotion(trackingInfo: TrackingInfo) { 
+  try {
+    const notion = getNotionClient();
+    const databaseId = process.env.NOTION_TRACKING_DATABASE_ID;
+    
+    if (!databaseId) {
+      throw new Error("Tracking database is not set.")
+    }
+
+    await notion.pages.create({
+      parent: { database_id: databaseId },
+      properties: {
+        Slug: { title: [{ text: { content: trackingInfo.slug } }] },
+        Path: { rich_text: [{ text: { content: trackingInfo.path } }] }
+      },
+    });
+
+  } catch (error) {
+    throw new Error('Failed to submit tracking information.', { cause: error });
+  }
+}
